@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Quicksand", sans-serif;
+}
+
+:root {
+  --primary-color: orange;
+  --accent-color: rgb(255, 250, 240);
+  --highlight-color: rgb(255, 180, 40);
+  --accent-color2: rgb(88, 131, 139);
+}
+
+section {
+  padding: 50px 10%;
+}
+
+*::selection {
+  color: #fff;
+  background: var(--primary-color);
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+  padding: 15px 10%;
+  transition: 0.2s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 1rem;
+  padding: 11px 20px;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: var(--highlight-color);
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--accent-color);
+  gap: 1rem;
+}
+
+.home-text {
+  flex: 1 1 17rem;
+}
+
+.home-img {
+  flex: 1 1 17rem;
+}
+
+.home-img img {
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-11px, 0);
+  }
+  50% {
+    transform: translate(-0px, -11px);
+  }
+  100% {
+    transform: translate(-11px, 0);
+  }
+}
+
+.home-text span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-color2);
+}
+
+.home-text h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+
+.home-text h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-color2);
+  text-transform: uppercase;
+  margin: 0.5rem 0 1.4rem;
+}
+
+.btn {
+  padding: 7px 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 40px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.btn:hover {
+  color: #fff;
+  background: var(--highlight-color);
+  border-color: var(--highlight-color);
+}
+
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 100px;
+}
+
+.heading span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-color2);
+}
+
+.heading h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.services {
+  background: var(--accent-color);
+}
+
+.temp {
+  width: 350px;
+  height: 400px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* .services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services-card {
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("../Pictures and videos for document/landscape-placeholder-svgrepo-com.svg");
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.services-card:nth-child(2) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("../Pictures and videos for document/landscape-placeholder-svgrepo-com.svg");
+}
+
+.services-card:nth-child(3) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("../Pictures and videos for document/landscape-placeholder-svgrepo-com.svg");
+}
+
+.services-card h2 {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+}
+
+.services-card p {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
+.services-card button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: var(--primary-color);
+  position: absolute;
+  top: 440px;
+  left: 30px;
+  font-size: 1rem;
+}
+
+.services-card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+} */
