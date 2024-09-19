@@ -11,11 +11,72 @@
   font-family: "Quicksand", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --primary-color: orange;
-  --accent-color: rgb(255, 250, 240);
-  --highlight-color: rgb(255, 180, 40);
+  --background-color: rgb(255, 250, 240);
+  --highlight-color: rgb(255, 195, 85);
   --accent-color2: rgb(88, 131, 139);
+  --darkmode-background: lightgray;
+  --darkmode-icon: gray;
+}
+
+.darkmode {
+  --primary-color: rgb(255, 216, 143);
+  --background-color: rgb(37, 35, 33);
+  --highlight-color: rgb(255, 208, 120);
+  --accent-color2: rgb(161, 238, 255);
+  --darkmode-background: gray;
+  --darkmode-icon: lightgray;
+}
+
+.cta-button {
+  background-color: var(--accent-color2);
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--darkmode-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+}
+
+#theme-switch svg {
+  fill: var(--darkmode-icon);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+.progress-bar {
+  position: fixed;
+  width: 100%;
+  height: 4.6vh;
+}
+
+.filled {
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color2);
 }
 
 section {
@@ -49,6 +110,9 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  font-size: 20px;
+  font-weight: 1000;
+  color: var(--primary-color);
 }
 
 .logo img {
@@ -84,7 +148,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: var(--accent-color);
+  background: var(--background-color);
   gap: 1rem;
 }
 
@@ -133,7 +197,7 @@ header {
   margin: 0.5rem 0 1.4rem;
 }
 
-.btn {
+#btn {
   padding: 7px 16px;
   border: 2px solid var(--primary-color);
   border-radius: 40px;
@@ -150,7 +214,8 @@ header {
 .heading {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 
 .heading span {
@@ -164,8 +229,16 @@ header {
   color: var(--primary-color);
 }
 
+.introduction {
+  display: flex;
+  font-size: 20px;
+  padding-bottom: 80px;
+  color: var(--accent-color2);
+  text-align-last: center;
+}
+
 .services {
-  background: var(--accent-color);
+  background: var(--background-color);
 }
 
 .temp {
@@ -178,6 +251,11 @@ header {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+}
+
+.categories:hover:first-child {
+  transform: scale(110%);
+  transition: transform 0.3s ease;
 }
 
 /* .services-container {
